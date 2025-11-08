@@ -1,8 +1,8 @@
 # Solana Monorepo
 
-A modern monorepo setup with pnpm workspaces, featuring NestJS backend and Next.js frontend.
+A modern monorepo setup with pnpm workspaces, featuring NestJS backend and Next.js frontend for Solana blockchain applications.
 
-## Structure
+## 📁 Structure
 
 ```
 solana_monorepo/
@@ -14,12 +14,12 @@ solana_monorepo/
 └── package.json          # Root package.json
 ```
 
-## Prerequisites
+## 🔧 Prerequisites
 
 - Node.js >= 18.0.0
 - pnpm >= 8.0.0
 
-## Installation
+## 📦 Installation
 
 ```bash
 # Install pnpm globally if you haven't already
@@ -29,7 +29,7 @@ npm install -g pnpm
 pnpm install
 ```
 
-## Development
+## 🚀 Development
 
 ### Run both apps in parallel
 
@@ -40,21 +40,36 @@ pnpm dev
 ### Run individual apps
 
 ```bash
-# Backend only (NestJS)
+# Backend only (NestJS - port 3001)
 pnpm backend:dev
 
-# Frontend only (Next.js)
+# Frontend only (Next.js - port 3000)
 pnpm frontend:dev
 ```
 
-## Build
+## 🧪 Testing
+
+### Backend Tests
+
+```bash
+# Run unit tests
+pnpm backend:test
+
+# Run e2e tests
+pnpm backend:test:e2e
+
+# Or use the shorthand for e2e
+pnpm test:e2e
+```
+
+## 🏗️ Build
 
 ```bash
 # Build all apps
 pnpm build
 ```
 
-## Applications
+## 📱 Applications
 
 ### Backend (NestJS)
 
@@ -63,6 +78,7 @@ pnpm build
 - **Endpoints:**
   - `GET /` - Hello message
   - `GET /api/health` - Health check
+- **Testing:** Jest with e2e tests in `test/` folder
 
 ### Frontend (Next.js)
 
@@ -71,9 +87,10 @@ pnpm build
 - **Features:**
   - Server-side rendering
   - Connects to backend API
-  - Modern React with App Router
+  - Modern React 19 with App Router
+  - Tailwind CSS v4 for styling
 
-## Adding New Packages
+## 📝 Adding New Packages
 
 To add a package to a specific workspace:
 
@@ -88,9 +105,48 @@ pnpm --filter frontend add <package-name>
 pnpm add -D -w <package-name>
 ```
 
-## Technologies
+## 🛠️ Technologies
+
+### Core
 
 - **Monorepo:** pnpm workspaces
-- **Backend:** NestJS, TypeScript, Express
-- **Frontend:** Next.js 14, React 18, TypeScript
 - **Package Manager:** pnpm
+
+### Backend
+
+- **Framework:** NestJS 10.3
+- **Runtime:** Node.js with TypeScript 5.3
+- **Server:** Express
+- **Testing:** Jest, Supertest
+- **Code Quality:** ESLint, Prettier
+
+### Frontend
+
+- **Framework:** Next.js 16.0
+- **UI Library:** React 19.2
+- **Language:** TypeScript 5
+- **Styling:** Tailwind CSS 4
+- **Code Quality:** ESLint
+
+## 📋 Available Scripts
+
+| Command                 | Description                               |
+| ----------------------- | ----------------------------------------- |
+| `pnpm dev`              | Run both backend and frontend in parallel |
+| `pnpm build`            | Build all applications                    |
+| `pnpm backend:dev`      | Start backend in development mode         |
+| `pnpm backend:test`     | Run backend unit tests                    |
+| `pnpm backend:test:e2e` | Run backend e2e tests                     |
+| `pnpm frontend:dev`     | Start frontend in development mode        |
+| `pnpm test:e2e`         | Run e2e tests                             |
+
+## 🤝 Contributing
+
+1. Create a feature branch from `develop`
+2. Make your changes
+3. Run tests to ensure everything works
+4. Push to the branch and create a Pull Request
+
+## 📄 License
+
+This project is private and proprietary.
