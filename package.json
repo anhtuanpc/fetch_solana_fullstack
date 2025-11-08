@@ -6,6 +6,8 @@
     "dev": "pnpm --parallel --filter './apps/*' dev",
     "build": "pnpm --filter './apps/*' build",
     "backend:dev": "pnpm --filter backend dev",
+    "backend:test": "pnpm --filter backend test",
+    "backend:test:e2e": "pnpm --filter backend test:e2e",
     "frontend:dev": "pnpm --filter frontend dev"
   },
   "devDependencies": {
